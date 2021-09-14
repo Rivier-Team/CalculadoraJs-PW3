@@ -1,0 +1,132 @@
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: #0b2b3b;
+   overflow: hidden;
+}
+
+body::before
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(#0066ff, #000);
+   clip-path: circle(22% at 30% 20%);
+}
+body::after
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(#000, #ff2448);
+   clip-path: circle(20% at 70% 90%);
+}
+
+section
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: linear-gradient(to top, #00909b, #004146);
+}
+
+section .color
+{ position: absolute; filter: blur(150px); }
+
+section .color:nth-child(1)
+{
+   top: 90%;
+   left: 70%;
+   width: 600px;
+   height: 600px; 
+   background: #0059ff;
+}
+
+.box
+{ position: relative; }
+
+.box .square
+{
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0;
+   font-size: 3rem;
+   text-align: center;
+   color: #fff;
+   backdrop-filter: blur(5px); /* new */
+   box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+   border: 1px solid rgba(255,255,255,0.5);
+   border-right: 1px solid rgba(255,255,255,0.2);
+   border-bottom: 1px solid rgba(255,255,255,0.2);
+   background: rgba(255,255,255,0.1);
+   border-radius: 10px;
+   z-index: 8;
+   animation: animate 10s linear infinite;
+   animation-delay: calc(-1s * var(--i));
+}
+.box .square:nth-child(1)
+{
+   top: 0px;
+   right: -420px;
+   width: 100px;
+   height: 100px;
+}
+.box .square:nth-child(2)
+{
+   top: 190px;
+   left: -50px;
+   width: 120px;
+   height: 120px;
+   z-index: 2;
+}
+.box .square:nth-child(3)
+{
+   bottom: 250px;
+   right: -60px;
+   width: 80px;
+   height: 80px;
+   z-index: 20;
+}
+.box .square:nth-child(4)
+{
+   bottom: -80px;
+   left: -100px;
+   width: 50px;
+   height: 50px;
+}
+.box .square:nth-child(5)
+{
+   top: -250px;
+   left: 350px;
+   width: 60px;
+   height: 60px;
+}
+
+@keyframes animate
+{
+   0%,100%
+   { transform: translateY(-40px); }
+   
+   50%
+   { transform: translateY(40px); }
+}
