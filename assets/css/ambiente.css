@@ -26,6 +26,7 @@ body::before
    height: 100%;
    background: linear-gradient(#0066ff, #000);
    clip-path: circle(22% at 30% 20%);
+   z-index: 10;
 }
 body::after
 {
@@ -37,6 +38,7 @@ body::after
    height: 100%;
    background: linear-gradient(#000, #ff2448);
    clip-path: circle(20% at 70% 90%);
+   z-index: 10;
 }
 
 section
@@ -61,7 +63,13 @@ section .color:nth-child(1)
 }
 
 .box
-{ position: relative; }
+{ 
+   position: relative; 
+   width: 100%;
+   height: 100%;
+   background: red;
+
+}
 
 .box .square
 {
@@ -80,21 +88,31 @@ section .color:nth-child(1)
    border-bottom: 1px solid rgba(255,255,255,0.2);
    background: rgba(255,255,255,0.1);
    border-radius: 10px;
+   cursor: pointer;
    z-index: 8;
    animation: animate 10s linear infinite;
    animation-delay: calc(-1s * var(--i));
+   transition: .5s;
+   user-select: none;
 }
+.box .square:hover
+{ transition: 0s; background: rgba(22, 76, 255, 0.308); }
+
+.box .square:active
+{ background: #0066ff; }
+
 .box .square:nth-child(1)
 {
-   top: 0px;
-   right: -420px;
+   top: 7rem;
+   left: 35rem;
    width: 100px;
    height: 100px;
+   z-index: 100;
 }
 .box .square:nth-child(2)
 {
    top: 190px;
-   left: -50px;
+   left: -80px;
    width: 120px;
    height: 120px;
    z-index: 2;
@@ -105,21 +123,54 @@ section .color:nth-child(1)
    right: -60px;
    width: 80px;
    height: 80px;
-   z-index: 20;
+   z-index: 200;
 }
 .box .square:nth-child(4)
 {
-   bottom: -80px;
-   left: -100px;
+   bottom: -60px;
+   left: -70px;
    width: 50px;
    height: 50px;
 }
 .box .square:nth-child(5)
 {
-   top: -250px;
+   top: -270px;
    left: 350px;
    width: 60px;
    height: 60px;
+}
+.box .square:nth-child(6)
+{
+   top: -150px;
+   left: 550px;
+   width: 60px;
+   height: 60px;
+}
+.box .square:nth-child(7)
+{
+   font-size: 1.5em;
+   top: -200px;
+   left: -230px;
+   width: 100px;
+   height: 100px;
+   z-index: 100;
+}
+.box .square:nth-child(8)
+{
+   font-size: 1.5em;
+   top: 1rem;
+   left: -290px;
+   width: 50px;
+   height: 50px;
+   z-index: 100;
+}
+.box .square:nth-child(9)
+{
+   font-size: 1.5em;
+   top: 20px;
+   left: 400px;
+   width: 50px;
+   height: 50px;
 }
 
 @keyframes animate
