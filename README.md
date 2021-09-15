@@ -1,7 +1,7 @@
 # CalculadoraJs-PW3
 Trabalho acadêmico, 3°ano do ensino médio da ETEC Jd. Ângela.
 
-- [Clique aqui](https://calculadorajs-pw3.netlify.app/) para a abrir o projeto.
+- [Clique aqui](https://calculadorajs-pw3.netlify.app/) para a abrir o projeto, ou visualize o [repositório no github](https://github.com/Rivier-Team/CalculadoraJs-PW3#calculadorajs-pw3).
 
 ## 1. Referência
 Essa aplicação foi iniciada a partir [desse vídeo](https://www.youtube.com/watch?v=NhcZh8Bwr30) do canal [Online Tutorials](https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog), com o intuito de deixar a aplicação mais moderna possível, desde de seu uso, até sua beleza, tendo seu front-end numa visão agradável para qualquer pessoa.
